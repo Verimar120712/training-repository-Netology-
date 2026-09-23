@@ -29,23 +29,26 @@ class Mentor:
             return f'ошибка'            
 
 
-best_student = Student('Василий', 'Пупкин', 'Мужской')
-best_student.finished_courses.append('Git')
-best_student.courses_in_progress.append('Python')
-best_student.grades['Git'] = [10, 10, 10, 10, 10]
-best_student.grades['Python'] = [10, 10]
+def main():
+    best_student = Student('Василий', 'Пупкин', 'Мужской')
+    best_student.finished_courses.append('Git')
+    best_student.courses_in_progress.append('Python')
+    best_student.grades['Git'] = [10, 10, 10, 10, 10]
+    best_student.grades['Python'] = [10, 10]
 
-print(f'Студент {best_student.name} {best_student.surname}:')
-print(f'Изучил: {best_student.finished_courses}')
-print(f'Проходит сейчас: {best_student.courses_in_progress}')
-print(f'Его оценки: {best_student.grades}')
+    print(f'Студент {best_student.name} {best_student.surname}:')
+    print(f'Изучил: {best_student.finished_courses}')
+    print(f'Проходит сейчас: {best_student.courses_in_progress}')
+    print(f'Его оценки: {best_student.grades}')
 
-cool_mentor = Mentor('Гвидо', 'Ван Россум')
-cool_mentor.courses_attached.append('Python')
-cool_mentor.rate_hw(best_student, 'Python', 10)
-cool_mentor.rate_hw(best_student, 'Python', 9)
-cool_mentor.rate_hw(best_student, 'Python', 10)
+    cool_mentor = Mentor('Гвидо', 'Ван Россум')
+    cool_mentor.courses_attached.append('Python')
+    cool_mentor.rate_hw(best_student, 'Python', 10)
+    cool_mentor.rate_hw(best_student, 'Python', 9)
+    cool_mentor.rate_hw(best_student, 'Python', 10)
 
-print(f'Преподователь {cool_mentor.name} {cool_mentor.surname} ведет курс {cool_mentor.courses_attached}')
-print(f'Студет {best_student.name} {best_student.surname} получил новые оценки: {best_student.grades}')
+    print(f'Преподователь {cool_mentor.name} {cool_mentor.surname} ведет курс {cool_mentor.courses_attached}')
+    print(f'Студет {best_student.name} {best_student.surname} получил новые оценки: {best_student.grades}')
 
+if __name__ == '__main__':
+    main()
